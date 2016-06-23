@@ -19,8 +19,6 @@ function route(args){
                 }
             }
         }
-            
-            
     return jsonResult;
 }
 exports.route = route;
