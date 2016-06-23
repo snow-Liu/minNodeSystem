@@ -8,8 +8,11 @@ var event = new events.EventEmitter();
 module.exports = function () {
     //同步方法列出文件夹中的内容
     this.ls = function (dir) {
-        var aFiles = fs.readdirSync(dir + "/");
-        return aFiles;
+        if(fs.existsSync(dir+"/")){
+            var aFiles = fs.readdirSync(dir + "/");
+            return aFiles;
+        }
+        
     }
     //创建文件夹
     this.mkdir = function(dir){

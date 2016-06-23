@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>苹果屏幕</title>
+    <title>The Computer</title>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/screen.css">
     <link rel="stylesheet" href="css/keybord.css">
+    <link rel="stylesheet" href="css/show.css">
 </head>
 
 <body>
@@ -17,22 +18,30 @@
             <div class="operation-screen">
 <!--               文件管理器界面-->
                 <div class="explorer-wrap">
-                    <div class="explorer-wrap-title"><span>我的电脑</span></div>
+                    <div class="explorer-wrap-title">
+                    <em class="fa fa-arrow-left fa-large" id="goBack"></em>
+                    <span id="currFolder">我的电脑</span>
+                    <i class=".hidepath" id="hidepath"></i>
+                    <em class="fa fa-close fa-large" id="closeExp"></em>
+                    </div>
                     <div class="explorer-wrap-content">
                         <div class="exp-content-nav"></div>
-                        <div class="exp-content-body"></div>
+                        <div class="exp-content-body">
+                            <ul id="files">
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="icosbar" class="icosbar">
-                <img src="images/ico1.png" />
+                <img id="expIco" src="images/ico1.png" />
                 <img src="images/ico2.png" />
                 <img src="images/ico3.png" />
                 <img src="images/ico4.png" />
                 <img src="images/ico5.png" />
             </div>
         </div>
-        <div class="logo-box"><span class="fa fa-chrome fa-2x"></span></div>
+        <div class="logo-box"><span id="chromelogo" class="fa fa-chrome fa-2x"></span></div>
         <div class="base-warp">
             <div class="base-top"></div>
             <div class="base-center"></div>
@@ -109,9 +118,18 @@
             </ol>
         </div>
     </div>
+    
+<!--    遮罩层-->
+<div class="beforeShow">
+     <div class="breathe-btn">
+         
+     </div>
+     <div id="showLogo" class="fa fa-chrome"></div>
+</div>
 <!--    <script type="text/javascript" src="js/icosBar.js"></script>-->
 <script type="text/javascript" src="js/jquery-1.12.1.js"></script>
 <script type="text/javascript" src="js/explorer.js"></script>
+<script type="text/javascript" src="js/show.js"></script>
 </body>
 
 </html>

@@ -64,7 +64,7 @@ body {
     src: url('../fonts/keyboard.otf') format('opentype');
 }
 
-li,
+ol li,
 .key {
     width: 47px;
     height: 69px;
@@ -83,7 +83,7 @@ li,
     cursor: pointer;
 }
 
-li:active,
+ol li:active,
 .key:active {
     top: 2px;
     box-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
