@@ -1,4 +1,4 @@
 var server = require('./server');
-var opfile = require('./opfile');
+var router = require('./router');
 
-server.start(opfile.opFile);
+server.start(router.route);
